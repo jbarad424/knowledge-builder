@@ -1,0 +1,9 @@
+[build]
+
+[deploy]
+startCommand = "python knowledge-builder.py"
+
+# Run daily at 3am ET (8am UTC) — offset from IP Monitor at 7am ET
+# This gives the Conversations Log time to accumulate entries from the prior day
+[deploy.cron]
+expr = "0 8 * * *"
